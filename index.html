@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+
+  <!-- Primary Meta Tags (Product Radar & SEO) -->
+  <title>Фриланс Заказы | Веб, Сайты, Боты, IT Лиды</title>
+  <meta name="title" content="Фриланс Заказы | Веб, Сайты, Боты, IT Лиды">
+  <meta name="description" content="Многопоточный AI-радар поиска IT-заказов на разработку сайтов, ботов и дизайн с бирж, Telegram, Reddit и карт. Персональные отклики через Gemini ИИ.">
+  <meta name="keywords" content="фриланс заказы, телеграм бот фриланс, поиск клиентов, разработка сайтов, боты под ключ, kwork, fl ru, хабр фриланс, ии отклики, gemini, парсинг карт">
+  <meta name="author" content="Freelance Radar Team">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#07090e">
+
+  <!-- Open Graph / Product Radar Link Preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Фриланс Заказы">
+  <meta property="og:title" content="Фриланс Заказы | Веб, Сайты, Боты, IT Лиды">
+  <meta property="og:description" content="AI-бот для мгновенного сбора заказов с фриланс-бирж, Telegram, карт и криптостартапов. Автоматический аудит сайтов и генерация откликов через Gemini.">
+  <meta property="og:image" content="assets/og-image.png">
+  <meta property="og:image:width" content="640">
+  <meta property="og:image:height" content="640">
+  <meta property="og:image:alt" content="Фриланс Заказы - AI Бот Поиска">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Фриланс Заказы | Веб, Сайты, Боты, IT Лиды">
+  <meta name="twitter:description" content="Многопоточный AI-радар поиска заказов на разработку сайтов, ботов и дизайн.">
+  <meta name="twitter:image" content="assets/og-image.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/avatar.png">
+  <link rel="apple-touch-icon" href="assets/avatar.png">
+
+  <!-- Fonts (High-performance preload) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Schema.org Microdata -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Фриланс Заказы | Веб, Сайты, Боты, IT Лиды",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Telegram",
+    "url": "https://t.me/freelance_web_developer_bot",
+    "offers": {
+      "@type": "Offer",
+      "price": "499",
+      "priceCurrency": "RUB",
+      "description": "3 дня бесплатного триала со всеми источниками"
+    },
+    "description": "Многопоточный Telegram-бот для автоматического поиска, фильтрации и аудита лидов на разработку сайтов, мобильных приложений, Telegram-ботов и дизайна."
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       Header Navigation
+       ========================================================================== -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="#" class="logo">
+        <img src="assets/avatar.png" alt="Фриланс Заказы" class="logo-img">
+        <div class="logo-text">
+          <span class="logo-title">Фриланс Заказы</span>
+          <span class="logo-badge">AI Radar Bot</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#maps" class="nav-link">Поиск по картам 🔥</a></li>
+          <li><a href="#sources" class="nav-link">Источники</a></li>
+          <li><a href="#ai-features" class="nav-link">ИИ-функции</a></li>
+          <li><a href="#demo" class="nav-link">Демо</a></li>
+          <li><a href="#roadmap" class="nav-link">Роадмап</a></li>
+          <li><a href="#tariffs" class="nav-link">Тарифы</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="https://t.me/freelance_web_developer_bot" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+          <svg width="17" height="17" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+          Открыть бота
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       Hero Section
+       ========================================================================== -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-tag">
+          <span class="hero-tag-pulse"></span>
+          Мониторинг без задержек в реальном времени
+        </div>
+
+        <h1 class="hero-title">
+          Перехватывайте лучшие <span>IT-заказы</span> раньше 95% конкурентов
+        </h1>
+
+        <p class="hero-subtitle">
+          Многопоточный радар мгновенно собирает заказы с бирж, Telegram-чатов, Reddit, гео-карт и криптостартапов. 
+          Встроенный Gemini ИИ отсекает спам и генерирует персонализированные отклики под ваш стек.
+        </p>
+
+        <div class="hero-actions">
+          <a href="https://t.me/freelance_web_developer_bot" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
+            <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+            Открыть бота (3 дня триала)
+          </a>
+          <a href="#tariffs" class="btn btn-secondary btn-lg">
+            Тарифы и условия
+          </a>
+        </div>
+
+        <div class="hero-badges">
+          <div class="hero-badge-item">
+            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+            3 дня полного доступа
+          </div>
+          <div class="hero-badge-item">
+            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+            Без привязки банковской карты
+          </div>
+          <div class="hero-badge-item">
+            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+            Моментальный запуск
+          </div>
+        </div>
+      </div>
+
+      <!-- Radar Animation & Avatar Preview -->
+      <div class="radar-box">
+        <div class="status-pill status-pill-1">
+          <span class="status-dot-green"></span>
+          <span>Новый заказ: <b>Telegram-бот на Python</b> (45 000 ₽)</span>
+        </div>
+
+        <div class="radar-circle-outer">
+          <div class="radar-circle-middle"></div>
+          <div class="radar-circle-inner"></div>
+          <div class="radar-crosshair-h"></div>
+          <div class="radar-crosshair-v"></div>
+          <div class="radar-sweep"></div>
+
+          <div class="radar-avatar-card">
+            <img src="assets/avatar.png" alt="Фриланс Радар Бот">
+          </div>
+        </div>
+
+        <div class="status-pill status-pill-2">
+          <span class="status-dot-green"></span>
+          <span>ИИ-отклик готов за <b>1.2 сек</b></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       KILLER FEATURE: GEO-MAPS RADAR (Голубой океан) - FIXED ALIGNMENT
+       ========================================================================== -->
+  <section id="maps" class="section" style="padding-top: 30px;">
+    <div class="container">
+      <div class="maps-feature-box">
+        <span class="maps-feature-badge">🔥 Киллер-фича бота</span>
+        <h2 style="font-size: clamp(1.8rem, 3.2vw, 2.5rem); font-weight: 800; line-height: 1.25; margin-bottom: 16px;">
+          Поиск клиентов по картам: Заказы с чеками от 10 000 ₽ без конкурентов
+        </h2>
+        <p style="color: var(--text-muted); font-size: 1.05rem; max-width: 800px; line-height: 1.6;">
+          Пока 95% фрилансеров толпятся на биржах и демпингуют цены, бот непрерывно сканирует гео-карты 
+          (<b>Яндекс.Карты, 2ГИС, OpenStreetMap</b>) и находит реальные оффлайн-компании, у которых <b>вообще нет сайта</b> либо ресурс сломан на мобилках.
+        </p>
+
+        <div class="maps-grid-compare">
+          <div class="compare-card bad">
+            <h3 class="compare-title" style="color: #ef4444;">
+              <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+              Классические биржи (Красный океан)
+            </h3>
+            <ul class="compare-list">
+              <li class="compare-list-item">
+                <span class="compare-bullet">❌</span>
+                <span class="compare-item-text"><b>На 1 заявку налетает 30–50 откликов</b> за первые 15 минут</span>
+              </li>
+              <li class="compare-list-item">
+                <span class="compare-bullet">❌</span>
+                <span class="compare-item-text"><b>Жесткий демпинг:</b> новички сбивают цену до пары тысяч рублей</span>
+              </li>
+              <li class="compare-list-item">
+                <span class="compare-bullet">❌</span>
+                <span class="compare-item-text"><b>Огромные комиссии бирж</b> за вывод средств и безопасную сделку</span>
+              </li>
+              <li class="compare-list-item">
+                <span class="compare-bullet">❌</span>
+                <span class="compare-item-text"><b>Низкое качество лидов:</b> заказчики часто сами не знают, чего хотят</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="compare-card good">
+            <h3 class="compare-title" style="color: var(--accent-cyan);">
+              <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Поиск по картам (Голубой океан)
+            </h3>
+            <ul class="compare-list">
+              <li class="compare-list-item">
+                <span class="compare-bullet">✅</span>
+                <span class="compare-item-text"><b>0 конкурентов:</b> вы первый, кто предлагает готовое решение руководству</span>
+              </li>
+              <li class="compare-list-item">
+                <span class="compare-bullet">✅</span>
+                <span class="compare-item-text"><b>Платежеспособный бизнес:</b> клиники, автосервисы, отели, производства</span>
+              </li>
+              <li class="compare-list-item">
+                <span class="compare-bullet">✅</span>
+                <span class="compare-item-text"><b>Чеки от 10 000 до 100 000+ ₽</b> на разработку сайта, каталога или бота</span>
+              </li>
+              <li class="compare-list-item">
+                <span class="compare-bullet">✅</span>
+                <span class="compare-item-text"><b>Эксклюзивность:</b> 25 компаний в день выдаются <b>строго в одни руки</b> подписчику тарифа «Полный фарш»</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div style="margin-top: 36px; text-align: center;">
+          <a href="https://t.me/freelance_web_developer_bot" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
+            Попробовать поиск по картам в боте
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Sources Section (Coverage) - FIXED CHIP ALIGNMENT
+       ========================================================================== -->
+  <section id="sources" class="section">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-label">Охват источников</span>
+        <h2 class="section-title">Все каналы поиска IT-заказов в одном окне</h2>
+        <p class="section-desc">Бот мониторит более 15 площадок одновременно, избавляя вас от необходимости открывать десятки вкладок.</p>
+      </div>
+
+      <div class="sources-grid">
+        <div class="source-card">
+          <div class="source-icon">
+            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+          </div>
+          <h3 class="source-title">Фриланс-биржи</h3>
+          <p class="source-text">Хабр Фриланс, FL.ru, Kwork, Freelancehunt, YouDo, Freelance.ru и международная биржа LaborX.</p>
+          <div class="source-tags">
+            <span class="source-tag">Хабр</span>
+            <span class="source-tag">Kwork</span>
+            <span class="source-tag">FL.ru</span>
+            <span class="source-tag">YouDo</span>
+          </div>
+        </div>
+
+        <div class="source-card">
+          <div class="source-icon">
+            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+          </div>
+          <h3 class="source-title">Telegram Чаты & Каналы</h3>
+          <p class="source-text">Прямой перехват сообщений через Telethon без задержек. Только реальные заказчики с отсевом спама.</p>
+          <div class="source-tags">
+            <span class="source-tag">IT Jobs</span>
+            <span class="source-tag">Фриланс чаты</span>
+            <span class="source-tag">Telethon</span>
+          </div>
+        </div>
+
+        <div class="source-card">
+          <div class="source-icon">
+            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+          </div>
+          <h3 class="source-title">Гео-карты (Оффлайн-бизнес)</h3>
+          <p class="source-text">Поиск через 2ГИС, Яндекс.Карты и OpenStreetMap компаний, у которых нет сайта или устаревший сервис. Готовая база для холодных продаж.</p>
+          <div class="source-tags">
+            <span class="source-tag">Яндекс.Карты</span>
+            <span class="source-tag">2ГИС</span>
+            <span class="source-tag">OSM</span>
+          </div>
+        </div>
+
+        <div class="source-card">
+          <div class="source-icon">
+            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+          </div>
+          <h3 class="source-title">Reddit, Discord & Форумы</h3>
+          <p class="source-text">Англоязычные сабреддиты (r/forhire), Discord-серверы и целевые фриланс-форумы с заказами на скрипты и софт.</p>
+          <div class="source-tags">
+            <span class="source-tag">Reddit</span>
+            <span class="source-tag">Discord</span>
+            <span class="source-tag">Форумы</span>
+          </div>
+        </div>
+
+        <div class="source-card">
+          <div class="source-icon">
+            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+          </div>
+          <h3 class="source-title">Web3 & Криптостартапы</h3>
+          <p class="source-text">Поиск новых децентрализованных проектов через DexScreener API и Bitcointalk, которым нужны боты, лендинги и Telegram Mini Apps.</p>
+          <div class="source-tags">
+            <span class="source-tag">DexScreener</span>
+            <span class="source-tag">Bitcointalk</span>
+            <span class="source-tag">Mini Apps</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       AI Features (Google Gemini)
+       ========================================================================== -->
+  <section id="ai-features" class="section">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-label">Искусственный Интеллект</span>
+        <h2 class="section-title">Нейросеть Google Gemini на службе вашей конверсии</h2>
+        <p class="section-desc">Бот не просто присылает текст, а полностью готовит вас к победе в конкурсе откликов.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <span class="feature-number">01</span>
+          <div class="feature-icon-wrap">
+            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"></path></svg>
+          </div>
+          <h3 class="feature-title">Умная фильтрация мусора</h3>
+          <p class="feature-desc">
+            ИИ анализирует контекст входящих сообщений. Резюме соискателей («ищу работу»), взаимный спам и флуд в чатах отсекаются автоматически. Вы получаете исключительно прямые заказы.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <span class="feature-number">02</span>
+          <div class="feature-icon-wrap">
+            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg>
+          </div>
+          <h3 class="feature-title">Генератор Pitch под ваш стек</h3>
+          <p class="feature-desc">
+            Укажите в анкете ваши навыки (например, React, Python, Aiogram) и опыт. По нажатию одной кнопки ИИ мгновенно формулирует убедительный персонализированный отклик под задачу клиента.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <span class="feature-number">03</span>
+          <div class="feature-icon-wrap">
+            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          </div>
+          <h3 class="feature-title">Экспресс-аудит сайтов</h3>
+          <p class="feature-desc">
+            Если заказчик прикрепил ссылку на свой сайт, нейросеть заранее найдет баги, отсутствие адаптива, онлайн-записи или калькулятора. Вы заходите в диалог с готовым решением и экспертной оценкой.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Interactive Lead Demo Section
+       ========================================================================== -->
+  <section id="demo" class="section">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-label">Интерфейс в действии</span>
+        <h2 class="section-title">Как выглядит карточка заказа в боте</h2>
+        <p class="section-desc">Попробуйте переключить вкладки и посмотреть, как работает автогенерация отклика и аудит сайта.</p>
+      </div>
+
+      <div class="demo-box">
+        <div class="demo-tabs">
+          <button class="demo-tab-btn active" data-target="panel-lead">
+            📋 1. Карточка заказа
+          </button>
+          <button class="demo-tab-btn" data-target="panel-pitch">
+            🤖 2. ИИ-отклик (Pitch)
+          </button>
+          <button class="demo-tab-btn" data-target="panel-audit">
+            🔍 3. Аудит сайта клиента
+          </button>
+        </div>
+
+        <div class="demo-content-body">
+          <!-- Panel 1: Original Lead -->
+          <div id="panel-lead" class="demo-panel active">
+            <div class="lead-tg-card">
+              <div class="lead-header-row">
+                <span class="lead-source-tag">Хабр Фриланс • Разработка сайтов</span>
+                <span class="lead-budget">Бюджет: 60 000 ₽</span>
+              </div>
+              <p><b>Заказ:</b> Разработка корпоративного сайта для компании по доставке грузов с калькулятором стоимости.</p>
+              <p style="margin-top: 8px; color: var(--text-muted);">
+                <b>ТЗ:</b> Нужен современный лендинг с адаптивной версткой, калькулятор габаритов груза с расчетом цены, интеграция с Telegram для заявок. Текущий сайт грузится 8 секунд: <code>cargo-express-demo.ru</code>.
+              </p>
+              <div style="margin-top: 18px; display: flex; gap: 10px; flex-wrap: wrap;">
+                <span class="btn btn-secondary btn-sm" style="opacity: 0.9;">🤖 Сгенерировать Pitch</span>
+                <span class="btn btn-secondary btn-sm" style="opacity: 0.9;">🔍 Экспресс-аудит сайта</span>
+                <a href="https://t.me/freelance_web_developer_bot" target="_blank" class="btn btn-primary btn-sm">🔗 Открыть в боте</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 2: Generated Pitch -->
+          <div id="panel-pitch" class="demo-panel">
+            <div class="lead-tg-card">
+              <div class="lead-header-row">
+                <span class="lead-source-tag" style="background: rgba(16, 185, 129, 0.15); color: #10b981;">✅ Сгенерировано за 1.1 сек (Gemini 2.5 Flash)</span>
+                <span style="color: var(--text-dim); font-size: 0.85rem;">Стек: React, Python, Aiogram</span>
+              </div>
+              <div class="demo-ai-pitch-box">
+Здравствуйте! Посмотрел ваше ТЗ на корпоративный сайт грузоперевозок. 
+
+Калькулятор расчета стоимости с зависимостью от веса/объема и интеграцией с ботом заявок в Telegram — типовая задача, делал аналогичное решение для логистической компании (средняя конверсия формы 11%).
+
+По поводу текущего сайта: заметил, что время отклика превышает норму из-за неоптимизированных скриптов. Новый сайт сделаю на легком стеке с PageSpeed 90+ и чистой мобильной адаптацией. 
+
+Готов приступить сегодня. Напишите в ЛС — покажу примеры калькуляторов и обсудим детали!
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 3: Website Audit -->
+          <div id="panel-audit" class="demo-panel">
+            <div class="lead-tg-card">
+              <div class="lead-header-row">
+                <span class="lead-source-tag" style="background: rgba(129, 140, 248, 0.15); color: #818cf8;">🔍 Экспресс-аудит: cargo-express-demo.ru</span>
+                <span style="color: #ef4444; font-weight: 600;">Найдено 3 критических бага</span>
+              </div>
+              <div class="demo-ai-pitch-box" style="border-color: rgba(129, 140, 248, 0.3);">
+1. ⚠️ Скорость загрузки: 7.8 сек (отсутствует сжатие изображений и lazy loading баннеров).
+2. ⚠️ Мобильная верстка: Таблица тарифов вылезает за пределы экрана на смартфонах с шириной &lt; 390px.
+3. ⚠️ Лидогенерация: Форма заявки требует 6 обязательных полей без автозаполнения, что снижает конверсию на 40%.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       ROADMAP: ЭТО ТОЛЬКО НАЧАЛО
+       ========================================================================== -->
+  <section id="roadmap" class="section">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-label">Видение проекта</span>
+        <h2 class="section-title">Это только начало: Масштабный роадмап</h2>
+        <p class="section-desc">Текущий запуск — это ядро системы. Мы строим глобальную платформу перехвата заказов для всех видов фрилансеров.</p>
+      </div>
+
+      <div class="roadmap-grid">
+        <!-- Stage 1 (Active) -->
+        <div class="roadmap-card active-stage">
+          <span class="roadmap-status-chip chip-now">● Доступно прямо сейчас (Этап 1)</span>
+          <h3 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 8px;">Веб-разработка, Боты & IT-сервисы</h3>
+          <p style="color: var(--text-muted); font-size: 0.92rem;">
+            Полная автоматизация мониторинга для разработчиков и технических специалистов:
+          </p>
+          <ul class="roadmap-items-list">
+            <li>
+              <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Разработка сайтов под ключ, лендингов и веб-сервисов</span>
+            </li>
+            <li>
+              <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Telegram-боты, парсеры данных и автоматизация</span>
+            </li>
+            <li>
+              <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Мобильные приложения (iOS / Android / Flutter / React Native)</span>
+            </li>
+            <li>
+              <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Web3, смарт-контракты и Telegram Mini Apps</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Stage 2 (Upcoming) -->
+        <div class="roadmap-card">
+          <span class="roadmap-status-chip chip-soon">⚡️ В активной разработке (Этап 2)</span>
+          <h3 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 8px;">Масштабный охват всех фрилансеров</h3>
+          <p style="color: var(--text-muted); font-size: 0.92rem;">
+            Подключение новых категорий источников и специализированных ИИ-промптов:
+          </p>
+          <ul class="roadmap-items-list">
+            <li>
+              <svg width="18" height="18" fill="none" stroke="#f59e0b" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+              <span><b>Копирайтинг & Контент:</b> статьи, посты, сценарии, переводы</span>
+            </li>
+            <li>
+              <svg width="18" height="18" fill="none" stroke="#f59e0b" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+              <span><b>Маркетинг & Трафик:</b> таргет, контекстная реклама, SMM и SEO</span>
+            </li>
+            <li>
+              <svg width="18" height="18" fill="none" stroke="#f59e0b" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+              <span><b>Дизайн & Медиа:</b> видеомонтаж, моушн-дизайн, 3D-графика, логотипы</span>
+            </li>
+            <li>
+              <svg width="18" height="18" fill="none" stroke="#f59e0b" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+              <span><b>Администрирование:</b> настройка серверов, DevOps и базы данных</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Time-Saver Calculator Section
+       ========================================================================== -->
+  <section id="calc" class="section">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-label">Экономика фриланса</span>
+        <h2 class="section-title">Сколько времени и денег вы теряете на ручной F5?</h2>
+        <p class="section-desc">Посчитайте выгоду от автоматизации мониторинга и мгновенного отклика.</p>
+      </div>
+
+      <div class="calc-wrapper">
+        <div class="calc-slider-wrap">
+          <label for="hoursSlider" style="font-weight: 600; font-size: 1.05rem;">
+            Сколько времени вы тратите на поиск заказов в день?
+          </label>
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="color: var(--text-dim); font-size: 0.9rem;">0.5 часа</span>
+            <span id="sliderHoursValue" style="color: var(--accent-cyan); font-weight: 800; font-size: 1.3rem;">2 ч.</span>
+            <span style="color: var(--text-dim); font-size: 0.9rem;">6 часов</span>
+          </div>
+          <input type="range" id="hoursSlider" class="calc-slider" min="0.5" max="6" step="0.5" value="2">
+          <p style="font-size: 0.88rem; color: var(--text-muted);">
+            В среднем специалист тратит от 2 часов в день на листание бирж и чатов, отсеивая спам и набирая однотипные отклики.
+          </p>
+        </div>
+
+        <div class="calc-results-grid">
+          <div class="calc-res-item">
+            <div id="calcHoursSaved" class="calc-res-number">~37 ч.</div>
+            <div class="calc-res-label">Сэкономлено времени в месяц</div>
+          </div>
+          <div class="calc-res-item">
+            <div id="calcSpeedBonus" class="calc-res-number">В 24×</div>
+            <div class="calc-res-label">Быстрее отклик заказчику</div>
+          </div>
+          <div class="calc-res-item" style="grid-column: span 2;">
+            <div id="calcExtraRevenue" class="calc-res-number">+55 500 ₽</div>
+            <div class="calc-res-label">Потенциальный доп. доход от освободившихся рабочих часов</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Pricing & Free Trial Section (100% Exact with constants.py)
+       ========================================================================== -->
+  <section id="tariffs" class="section">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-label">Тарифы & Доступ</span>
+        <h2 class="section-title">Честные условия без скрытых списаний</h2>
+        <p class="section-desc">Начните с бесплатного 3-дневного ознакомительного доступа. Никаких банковских карт не требуется.</p>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- Tier 1 -->
+        <div class="pricing-card">
+          <h3 class="pricing-name">⚡️ Поиск по старинке</h3>
+          <p style="color: var(--text-dim); font-size: 0.88rem; margin-bottom: 18px;">Чистый поток со всех бирж без ИИ</p>
+          <div class="pricing-price-wrap">
+            <span class="pricing-price">499 ₽</span>
+            <span class="pricing-period">/ месяц (5.69 USDT)</span>
+          </div>
+          <ul class="pricing-list">
+            <li class="pricing-item">
+              <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Все биржи: Хабр, Kwork, FL, YouDo, Freelancehunt, Freelance.ru, LaborX</span>
+            </li>
+            <li class="pricing-item">
+              <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Безлимитный объем входящих лидов</span>
+            </li>
+            <li class="pricing-item">
+              <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Мгновенная доставка без задержек (0 сек)</span>
+            </li>
+          </ul>
+          <a href="https://t.me/freelance_web_developer_bot" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+            Попробовать бесплатно
+          </a>
+        </div>
+
+        <!-- Tier 2 (Featured) -->
+        <div class="pricing-card featured">
+          <div class="pricing-badge-popular">Рекомендуемый</div>
+          <h3 class="pricing-name">🚀 Владыка интернет-ресурсов</h3>
+          <p style="color: var(--text-dim); font-size: 0.88rem; margin-bottom: 18px;">Биржи + Форумы + Telegram + Gemini ИИ</p>
+          <div class="pricing-price-wrap">
+            <span class="pricing-price">799 ₽</span>
+            <span class="pricing-period">/ месяц (8.99 USDT)</span>
+          </div>
+          <ul class="pricing-list">
+            <li class="pricing-item">
+              <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Все биржи + IT-форумы + Telegram чаты и каналы</span>
+            </li>
+            <li class="pricing-item">
+              <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span><b>40 умных ИИ-откликов (Pitch)</b> в сутки</span>
+            </li>
+            <li class="pricing-item">
+              <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Персональная настройка стека в личном кабинете</span>
+            </li>
+            <li class="pricing-item">
+              <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Фильтрация по персональным ключевым словам</span>
+            </li>
+          </ul>
+          <a href="https://t.me/freelance_web_developer_bot" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            Получить 3 дня доступа
+          </a>
+        </div>
+
+        <!-- Tier 3 -->
+        <div class="pricing-card">
+          <h3 class="pricing-name">👑 Полный фарш</h3>
+          <p style="color: var(--text-dim); font-size: 0.88rem; margin-bottom: 18px;">Всё включено: Карты, Web3, ИИ-аудит сайтов</p>
+          <div class="pricing-price-wrap">
+            <span class="pricing-price">2 499 ₽</span>
+            <span class="pricing-period">/ месяц (28.49 USDT)</span>
+          </div>
+          <ul class="pricing-list">
+            <li class="pricing-item">
+              <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span><b>250 ИИ-откликов (Pitch)</b> в сутки</span>
+            </li>
+            <li class="pricing-item">
+              <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span><b>25 эксклюзивных компаний с карт</b> в день (в одни руки!)</span>
+            </li>
+            <li class="pricing-item">
+              <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span><b>5 крипто-стартапов</b> в день (DexScreener/Web3)</span>
+            </li>
+            <li class="pricing-item">
+              <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Включен ИИ-аудит сайтов заказчиков</span>
+            </li>
+          </ul>
+          <a href="https://t.me/freelance_web_developer_bot" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+            Активировать VIP-триал
+          </a>
+        </div>
+      </div>
+
+      <div class="pricing-discounts-note">
+        🔥 <b>Скидочная система при оплате на срок:</b> 2 мес — <b>5%</b> | 3 мес — <b>10%</b> | 6 мес — <b>15%</b> | 1 год — <b>25%</b>
+      </div>
+
+      <!-- Community Free Extension Banner -->
+      <div class="community-banner">
+        <div class="community-text">
+          <h4>🎁 Авторское продление: помогите развитию бота и пользуйтесь бесплатно</h4>
+          <p>
+            Мы постоянно развиваем радар. Если вы активно пользуетесь ботом, находите баги или предлагаете толковые каналы/источники для мониторинга — автор вручную начислит вам бесплатную подписку. Нам важна реальная обратная связь!
+          </p>
+        </div>
+        <a href="https://t.me/freelance_web_developer_bot" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="white-space: nowrap;">
+          Открыть бота в Telegram
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FAQ Section - VPN QUESTION REMOVED
+       ========================================================================== -->
+  <section id="faq" class="section">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-label">Вопросы и ответы</span>
+        <h2 class="section-title">Часто задаваемые вопросы</h2>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item active">
+          <button class="faq-question">
+            Как активировать бесплатный пробный период?
+            <svg class="faq-icon" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </button>
+          <div class="faq-answer">
+            Просто перейдите в бота по ссылке <b>@freelance_web_developer_bot</b> и нажмите кнопку <b>/start</b>. Ознакомительный доступ на 3 дня начислится автоматически: первые 24 часа действует максимальный VIP-тариф «Полный фарш», следующие 48 часов — тариф «Владыка интернет-ресурсов».
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Что такое «эксклюзивные лиды с карт» в тарифе «Полный фарш»?
+            <svg class="faq-icon" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </button>
+          <div class="faq-answer">
+            Это контакты компаний из 2ГИС, Яндекс.Карт и OSM без сайтов или с устаревшими ресурсами. Чтобы исключить внутреннюю конкуренцию среди подписчиков бота, эти 25 компаний ежедневно выдаются <b>персонально вам в одни руки</b>. Никто другой из пользователей бота эти контакты в этот день не получит.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Как быстро бот находит и доставляет новые заказы?
+            <svg class="faq-icon" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </button>
+          <div class="faq-answer">
+            Сканеры работают непрерывно в многопоточном режиме 24/7. Как только заявка появляется на бирже или в целевом канале, бот мгновенно перехватывает её, фильтрует через Gemini ИИ и отправляет вам в личные сообщения без задержек (0 секунд).
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Как ИИ понимает мой опыт и стек технологий?
+            <svg class="faq-icon" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </button>
+          <div class="faq-answer">
+            В боте есть раздел «👤 Личный кабинет» -> «✏️ Настройка анкеты специалиста». Там вы один раз указываете ваш стек (например, Python, FastAPI, React, Flutter), опыт работы и желаемый стиль общения. Нейросеть будет учитывать эти данные при формулировании каждого персонального отклика.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Будут ли появляться заказы не только для веб-разработчиков?
+            <svg class="faq-icon" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </button>
+          <div class="faq-answer">
+            Да! Текущий запуск сфокусирован на IT и веб-разработке (сайты, боты, скрипты, mobile, дизайн). В ближайших обновлениях мы подключаем парсинг и ИИ-фильтрацию для других сфер фриланса: копирайтинг, реклама/маркетинг, видеомонтаж, 3D-графика и администрирование.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Footer
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <img src="assets/avatar.png" alt="Логотип" class="logo-img">
+            <span class="logo-title">Фриланс Заказы</span>
+          </div>
+          <p class="footer-desc">
+            Умный радар заказов для фрилансеров, разработчиков и веб-студий. Автоматический сбор лидов с бирж и карт, персональные отклики через Google Gemini.
+          </p>
+        </div>
+
+        <div>
+          <h4 style="margin-bottom: 14px; font-size: 1rem;">Быстрый запуск</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px;">
+            <li>
+              <a href="https://t.me/freelance_web_developer_bot" target="_blank" rel="noopener noreferrer" style="color: var(--accent-cyan); text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 6px;">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+                Запустить бота в Telegram
+              </a>
+            </li>
+            <li><a href="https://web.telegram.org/k/#@freelance_web_developer_bot" target="_blank" rel="noopener noreferrer" style="color: var(--text-muted); text-decoration: none;">Открыть в Web Telegram</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-copy">
+        © 2026 Фриланс Заказы | Веб, Сайты, Боты, IT Лиды (@freelance_web_developer_bot). Все права защищены.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts (Deferred, zero render blocking) -->
+  <script src="script.js" defer></script>
+</body>
+</html>
